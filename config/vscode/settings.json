@@ -1,0 +1,104 @@
+{
+    "window.commandCenter": 1,
+    "editor.lineHeight": 1.4,
+    "editor.fontSize": 15,
+    "workbench.colorTheme": "Default Dark Modern",
+
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"], "after": ["<Esc>"]
+      },
+      // Ctrl+h 映射为 Left
+      {
+          "before": ["<C-h>"], "after": ["<left>"]
+      },
+      // Ctrl+l 映射为 Right
+      {
+          "before": ["<C-l>"], "after": ["<right>"]
+      },
+      // Ctrl+k 映射为 Up
+      {
+          "before": ["<C-k>"], "after": ["<up>"]
+      },
+      // Ctrl+j 映射为 Down
+      {
+          "before": ["<C-j>"], "after": ["<down>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"], "after": ["d", "d"]
+      },
+      // Tab operation
+      // tn 映射到 gt (下一个标签页/编辑器)
+      {
+          "before": ["t", "n"], "after": ["g", "t"]
+      },
+      // tp 映射到 gT (上一个标签页/编辑器)
+      {
+          "before": ["t", "p"], "after": ["g", "T"]
+      },
+      // <Leader>k 映射到 gt
+      {
+          "before": ["<leader>", "k"], "after": ["g", "t"]
+      },
+      // <Leader>j 映射到 gT
+      {
+          "before": ["<leader>", "j"], "after": ["g", "T"]
+      },
+      // <Leader>l 映射到 gt
+      {
+          "before": ["<leader>", "l"], "after": ["g", "t"]
+      },
+      // <Leader>h 映射到 gT
+      {
+          "before": ["<leader>", "h"], "after": ["g", "T"]
+      },
+      // 行首行尾跳转
+      // H 映射到 ^ (行首第一个非空白字符)
+      {
+          "before": ["H"], "after": ["^"]
+      },
+      // L 映射到 $ (行尾)
+      {
+          "before": ["L"], "after": ["$"]
+      },
+      // Quit normal mode
+      // <Leader>q 映射到 :q<CR> (关闭当前编辑器/窗口)<CR> 表示回车
+      {
+          "before": ["<leader>", "q"], "after": [":", "q", "<CR>"]
+      },
+      // <Leader>Q 映射到 :qa!<CR> (退出所有，强制)
+      {
+          "before": ["<leader>", "Q"], "after": [":", "qa", "!", "<CR>"]
+      }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+       // 可视模式下，v 映射到 Esc (退出可视模式)
+       {
+           "before": ["v"], "after": ["<esc>"]
+       },
+        // 可视模式下，H 映射到 ^ (扩展选择到行首第一个非空白字符)
+       {
+           "before": ["H"], "after": ["^"]
+       },
+       // 可视模式下，L 映射到 $ (扩展选择到行尾)
+       {
+           "before": ["L"], "after": ["$"]
+       }
+    ],
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "breadcrumbs.enabled": false,
+}
