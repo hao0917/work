@@ -1,0 +1,91 @@
+﻿" =============================================================================
+" wenhao
+" =============================================================================
+
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
+" -----------------------------------------------------------------------------
+"  < 文件配置 >
+" -----------------------------------------------------------------------------
+filetype on                                           "启用文件类型侦测
+filetype plugin on                                    "针对不同的文件类型加载对应的插件
+filetype plugin indent on                             "启用缩进
+set clipboard^=unnamed,unnamedplus
+set mouse=a
+
+set smartindent                                       "启用智能对齐方式
+set expandtab                                         "将Tab键转换为空格
+set tabstop=4                                         "设置Tab键的宽度，可以更改，如：宽度为2
+set shiftwidth=4                                      "换行时自动缩进宽度，可更改（宽度同tabstop）
+set smarttab                                          "指定按一次backspace就删除shiftwidth宽度
+set scrolloff=5                                       "启用滚动时保持光标居中
+set autoread                                          "当文件在外部被修改，自动更新该文件
+set ignorecase                                        "搜索模式里忽略大小写
+set smartcase                                         "如果搜索模式包含大写字符，不使用'ignorecase'选项
+" set noincsearch                                     "在输入要搜索的文字时，取消实时匹配
+
+" -----------------------------------------------------------------------------
+"  < 界面配置 >
+" -----------------------------------------------------------------------------
+syntax on                                            "语法高亮
+set t_Co=256                                         "设置为 256 色模式
+set number                                           "显示行号
+set showmode
+set showcmd
+set cursorline                                       "突出显示当前行
+set laststatus=2                                     "启用状态栏信息
+set cmdheight=2                                      "设置命令行的高度为2，默认为1
+"set guifont=Consolas:h12               		      "设置字体:字号（字体名称空格用下划线代替）
+"set nowrap                                           "设置不自动换行
+"set shortmess=atI                                    "去掉欢迎界面
+set guioptions-=m                                     "隐藏菜单栏
+set guioptions-=T                                     "隐藏工具栏
+
+colorscheme desert
+
+" -----------------------------------------------------------------------------
+"  < 按键配置 >
+" -----------------------------------------------------------------------------
+
+let mapleader=' '
+
+" Tab operation
+nnoremap tn gt
+nnoremap tp gT
+nnoremap <Leader>k gt
+nnoremap <Leader>j gT
+nnoremap <Leader>l gt
+nnoremap <Leader>h gT
+
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L $
+
+" Quit normal mode
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :qa!<CR>
+
+vnoremap v <Esc>
+
+inoremap jk <Esc>
+
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+
+
+" -----------------------------------------------------------------------------
+"  < 其它配置 >
+" -----------------------------------------------------------------------------
+
+"set writebackup                             "保存文件前建立备份，保存成功后删除该备份
+set noundofile                              "无un文件
+set nobackup                                "设置无备份文件
+set noswapfile                              "设置无临时文件
+" set vb t_vb=                                "关闭提示音
+
+" 自动切换目录为当前编辑文件所在目录
+au BufRead,BufNewFile,BufEnter * cd %:p:h
