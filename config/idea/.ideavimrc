@@ -33,12 +33,10 @@ set showmode
 let mapleader=' '
 
 " Tab operation
-nnoremap tn gt
 nnoremap tp gT
-nnoremap <Leader>k gt
-nnoremap <Leader>j gT 
-nnoremap <Leader>l gt 
+nnoremap tn gt
 nnoremap <Leader>h gT
+nnoremap <Leader>l gt 
 
 " centering screen
 "nnoremap j jzz
@@ -54,10 +52,7 @@ vnoremap L $
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa!<CR>
 
-vnoremap v <Esc>
-
 inoremap jj <Esc>
-inoremap jk <Esc>
 
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>

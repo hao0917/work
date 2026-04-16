@@ -1,5 +1,5 @@
 {
-        "update.mode": "manual",
+    "update.mode": "manual",
     "editor.lineHeight": 1.2,
     "editor.fontSize": 15,
 
@@ -34,29 +34,21 @@
       {
         "before": ["<leader>", "d"], "after": ["d", "d"]
       },
-      // tn 映射到 gt (下一个标签页/编辑器)
-      {
-        "before": ["t", "n"], "after": ["g", "t"]
-      },
       // tp 映射到 gT (上一个标签页/编辑器)
       {
         "before": ["t", "p"], "after": ["g", "T"]
       },
-      // <Leader>k 映射到 gt
+      // tn 映射到 gt (下一个标签页/编辑器)
       {
-        "before": ["<leader>", "k"], "after": ["g", "t"]
-      },
-      // <Leader>j 映射到 gT
-      {
-        "before": ["<leader>", "j"], "after": ["g", "T"]
-      },
-      // <Leader>l 映射到 gt
-      {
-        "before": ["<leader>", "l"], "after": ["g", "t"]
+        "before": ["t", "n"], "after": ["g", "t"]
       },
       // <Leader>h 映射到 gT
       {
         "before": ["<leader>", "h"], "after": ["g", "T"]
+      },
+      // <Leader>l 映射到 gt
+      {
+        "before": ["<leader>", "l"], "after": ["g", "t"]
       },
       // H 映射到 ^ (行首第一个非空白字符)
       {
@@ -76,10 +68,6 @@
       }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
-       // 可视模式下，v 映射到 Esc (退出可视模式)
-       {
-         "before": ["v"], "after": ["<esc>"]
-       },
        // 可视模式下，H 映射到 ^ (扩展选择到行首第一个非空白字符)
        {
          "before": ["H"], "after": ["^"]
@@ -97,6 +85,6 @@
     "workbench.colorCustomizations": {
       // "editorLineNumber.activeForeground": "#ff6666", // 让当前行号变成亮黄色
       // "editorCursor.foreground": "#808080", // 让光标也变成醒目的颜色
-      "editor.lineHighlightBackground": "#f0f0f020" 
+      "editor.lineHighlightBackground": "#f0f0f020", 
     }
 }
