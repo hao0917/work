@@ -1,90 +1,55 @@
 {
-    "update.mode": "manual",
-    "editor.lineHeight": 1.2,
-    "editor.fontSize": 15,
+  "update.mode": "manual",
+  "editor.lineHeight": 1.2,
+  "editor.fontSize": 15,
 
-    "vim.easymotion": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.incsearch": true,
-    "vim.hlsearch": true,
-    "vim.leader": "<space>",
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"], "after": ["<Esc>"]
-      },
-      // Ctrl+h 映射为 Left
-      {
-        "before": ["<C-h>"], "after": ["<left>"]
-      },
-      // Ctrl+l 映射为 Right
-      {
-        "before": ["<C-l>"], "after": ["<right>"]
-      },
-      // Ctrl+k 映射为 Up
-      {
-        "before": ["<C-k>"], "after": ["<up>"]
-      },
-      // Ctrl+j 映射为 Down
-      {
-        "before": ["<C-j>"], "after": ["<down>"]
-      }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "d"], "after": ["d", "d"]
-      },
-      // tp 映射到 gT (上一个标签页/编辑器)
-      {
-        "before": ["t", "p"], "after": ["g", "T"]
-      },
-      // tn 映射到 gt (下一个标签页/编辑器)
-      {
-        "before": ["t", "n"], "after": ["g", "t"]
-      },
-      // <Leader>h 映射到 gT
-      {
-        "before": ["<leader>", "h"], "after": ["g", "T"]
-      },
-      // <Leader>l 映射到 gt
-      {
-        "before": ["<leader>", "l"], "after": ["g", "t"]
-      },
-      // H 映射到 ^ (行首第一个非空白字符)
-      {
-        "before": ["H"], "after": ["^"]
-      },
-      // L 映射到 $ (行尾)
-      {
-        "before": ["L"], "after": ["$"]
-      },
-      // <Leader>q 映射到 :q<CR> (关闭当前编辑器/窗口)<CR> 表示回车
-      {
-        "before": ["<leader>", "q"], "after": [":", "q", "<CR>"]
-      },
-      // <Leader>Q 映射到 :qa!<CR> (退出所有，强制)
-      {
-        "before": ["<leader>", "Q"], "after": [":", "qa", "!", "<CR>"]
-      }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-       // 可视模式下，H 映射到 ^ (扩展选择到行首第一个非空白字符)
-       {
-         "before": ["H"], "after": ["^"]
-       },
-       // 可视模式下，L 映射到 $ (扩展选择到行尾)
-       {
-         "before": ["L"], "after": ["$"]
-       }
-    ],
-    "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"], "after": ["<Esc>"]
     },
-    "editor.cursorSmoothCaretAnimation": "on",
-    "workbench.colorCustomizations": {
-      // "editorLineNumber.activeForeground": "#ff6666", // 让当前行号变成亮黄色
-      // "editorCursor.foreground": "#808080", // 让光标也变成醒目的颜色
-      "editor.lineHighlightBackground": "#f0f0f020", 
+    {
+      "before": ["<C-h>"], "after": ["<left>"]
+    },
+    {
+      "before": ["<C-l>"], "after": ["<right>"]
+    },
+    {
+      "before": ["<C-k>"], "after": ["<up>"]
+    },
+    {
+      "before": ["<C-j>"], "after": ["<down>"]
     }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "h"], "after": ["g", "T"]
+    },
+    {
+      "before": ["<leader>", "l"], "after": ["g", "t"]
+    },
+    {
+      "before": ["<leader>", "w"], "after": [":", "w", "<CR>"]
+    },
+    {
+      "before": ["<leader>", "q"], "after": [":", "q", "<CR>"]
+    },
+    {
+      "before": ["<leader>", "Q"], "after": [":", "qa", "!", "<CR>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+  ],
+  "editor.cursorSmoothCaretAnimation": "on",
 }

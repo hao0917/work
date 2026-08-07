@@ -27,28 +27,13 @@ map Q gq
 " Find more examples here: https://jb.gg/share-ideavimrc
 set clipboard^=unnamed,unnamedplus
 set ideajoin
-" 显示当前模式
 set showmode
 
 let mapleader=' '
 
-" Tab operation
-nnoremap tp gT
-nnoremap tn gt
 nnoremap <Leader>h gT
 nnoremap <Leader>l gt 
 
-" centering screen
-"nnoremap j jzz
-"nnoremap k kzz
-
-
-nnoremap H ^
-nnoremap L $
-vnoremap H ^
-vnoremap L $
-
-" Quit normal mode
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa!<CR>
 
